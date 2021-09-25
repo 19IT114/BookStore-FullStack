@@ -3,9 +3,9 @@ This is Full Stack Web Application created for learning process.
 
 ## Tech Stack
 
- Frontend : REACT JS
- Backend : Spring Boot 
- Database : MySQL Database
+#### Frontend : REACT JS
+#### Backend : Spring Boot 
+#### Database : MySQL Database
 
 ## Other Integrations :
  Pipeline : Jenkins
