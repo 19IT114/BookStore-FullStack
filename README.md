@@ -1,17 +1,18 @@
 # BookStore-FullStack
 This is Full Stack Web Application created for learning process.
 
+####  
 
 ## Tech Stack
 
 #### Frontend : REACT JS
 #### Backend : Spring Boot (Dependencies : Spring Web, Lombok, Spring Boot DevTools, Spring Data JPA, MySQL Driver)
 #### Database : MySQL Database
-
+####  
 
 ## Other Integrations :
 #### Pipeline : Jenkins
-
+####  
 
 ## Final Result
 
