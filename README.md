@@ -2,8 +2,8 @@
 This is Full Stack Web Application created for learning process.
 
 ## Tech Stack
-Frontend : REACT JS
-Backend : Spring Boot 
+### Frontend : REACT JS
+### Backend : Spring Boot 
 
 ## Others :
-Pipeline : Jenkins
+### Pipeline : Jenkins
