@@ -1,9 +1,9 @@
 # BookStore-FullStack
 This is Full Stack Web Application created for learning process.
 
-Tech Stack
+## Tech Stack
 Frontend : REACT JS
 Backend : Spring Boot 
 
-Others :
+## Others :
 Pipeline : Jenkins
