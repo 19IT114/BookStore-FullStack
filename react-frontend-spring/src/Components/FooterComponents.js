@@ -11,7 +11,7 @@ class FooterComponents extends Component {
       <div>
         <footer className="footer">
           <span className="text-muted">
-            Advanced Java Programming 19IT114 ViragKumar Patel
+            Advanced Java Programming 19IT114<br></br> ViragKumar Patel
           </span>
         </footer>
       </div>

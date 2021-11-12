@@ -1,49 +1,76 @@
-import React, { Component } from 'react';
-import bookservice from '../Services/BookService';
+import React, { Component } from "react";
+import Bookservice from "../Services/BookService";
 
 class ViewBookComponent extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props){
-        super(props)
+    this.state = {
+      id: this.props.match.params.id,
+      bookname: "",
+      bookauthor: "",
+      publisher: "",
+      publishedyear: "",
+    };
+    this.cancel = this.cancel.bind(this);
+  }
+  componentDidMount() {
+    Bookservice.getbookbyid(this.state.id).then((Response) => {
+      let book = Response.data;
+      this.setState({
+        bookname: book.bookname,
+        bookauthor: book.bookauthor,
+        publisher: book.publisher,
+        publishedyear: book.publishedyear,
+      });
+    });
+  }
 
-        this.state = {
-            id: this.props.match.params.id,
-            books: {}
-        }
-    }
-componentDidMount(){
-    bookservice.getbookbyid(this.state.id).then((Response)=>{
-        this.setState({book: Response.data});
-    })
-}
+  cancel()
+  {
+      this.props.history.push("/");
+  }
 
-    render() {
-        return (
-            <div>
-                <div className="card col-md-6 offset-md-3" style={{marginTop: "30px"}}>
-                    <h2 className="text-center">View Book Details</h2>
-                    <div className="card-body">
-                        <div className="row" style={{margin: "20px"}}>
-                            <label> Book Name : </label>
-                            <div>{ this.state.books.bookname }</div>
-                        </div>
-                        <div className="row" style={{margin: "20px"}}>
-                            <label> Book Author : </label>
-                            <div>{this.state.books.bookname}</div>
-                        </div>
-                        <div className="row" style={{margin: "20px"}}>
-                            <label> Publisher : </label>
-                            <div>{this.state.books.bookname}</div>
-                        </div>
-                        <div className="row" style={{margin: "20px"}}>
-                            <label> Published Year : </label>
-                            <div>{this.state.books.bookname}</div>
-                        </div>
-                    </div>
-                </div>
+  render() {
+    return (
+      <div>
+        <div
+          className="card col-md-5 offset-md-3"
+          style={{ marginTop: "30px" }}
+        >
+          <h2 className="text-center">View Book Details</h2>
+          <div className="card-body">
+            <div className="row" style={{ margin: "20px", textAlign: "center"}}>
+              <label><b> Book Name :</b> {this.state.bookname}</label>
+              
             </div>
-        );
-    }
+            <div className="row" style={{ margin: "20px" , textAlign: "center"}}>
+              <label><b> Book Author :</b> {this.state.bookauthor}</label>
+             
+            </div>
+            <div className="row" style={{ margin: "20px" , textAlign: "center"}}>
+              <label><b> Publisher :</b> {this.state.publisher}</label>
+
+            </div>
+            <div className="row" style={{ margin: "20px", textAlign: "center" }}>
+              <label> <b>Published Year :</b>  {this.state.publishedyear}</label>
+            </div>
+
+            <div className="text-center">
+                
+                    <button
+                      className="btn btn-danger"
+                      onClick={this.cancel}
+                      style={{ marginLeft: "10px" }}
+                    >
+                      Go Back
+                    </button>
+                  </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default ViewBookComponent;

@@ -46,10 +46,14 @@ class BookComponents extends React.Component{
         return(
             <div>
                 
-                <h1 className = "text-center">Books List</h1>
-                <div className = "btn text-center">
-                    <button className = "text-center btn btn-primary" onClick= {this.addBook}> Add a Book </button>
-                </div>              
+                <h1 className = "text-center" style = {{border: "2px solid black",borderRadius: "20px", color: "black", margin: "20px"}}>Book's List</h1>
+                <center>
+                <div className = "btn text-center" >
+                  
+                    <button className = "text-center btn btn-primary" style={{borderRadius:"10px"}} onClick= {this.addBook}> Add a Book </button>
+                    
+                </div>   
+                </center>           
                 <table className = "table table-hover">
                     <thead>
                         <tr>
