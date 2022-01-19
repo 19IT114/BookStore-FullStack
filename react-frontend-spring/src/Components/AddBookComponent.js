@@ -21,7 +21,7 @@ class AddBookComponent extends Component {
     this.cancel = this.cancel.bind(this);
   }
   cancel(){
-    this.props.history.push("/")
+    this.props.history.push("/book")
   }
 
   saveBook = (e) => {
